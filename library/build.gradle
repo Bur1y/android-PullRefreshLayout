@@ -1,4 +1,6 @@
 apply plugin: 'com.android.library'
+apply plugin: 'android-maven'
+
 
 android {
     compileSdkVersion 21
@@ -20,9 +22,9 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:support-v4:21.0.0'
-    compile 'com.android.support:support-annotations:21.0.3'
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    runtimeOnly 'com.android.support:support-v4:28.0.0'
+    runtimeOnly 'com.android.support:support-annotations:28.0.0'
 }
 
 apply plugin: 'com.github.dcendents.android-maven'
@@ -80,6 +82,7 @@ artifacts {
     archives javadocJar
     archives sourcesJar
 }
+
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
 bintray {

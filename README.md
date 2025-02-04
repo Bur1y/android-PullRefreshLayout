@@ -17,7 +17,7 @@ Add dependency.
 ```
 dependencies {
     compile 'com.baoyz.pullrefreshlayout:library:1.2.0'
-}
+}`
 ```
 
 Use method like SwipeRefreshLayout's usage.  
